@@ -92,40 +92,20 @@ class Home extends Component {
                     <table className="table bootstrap-datatable countries">
                       <thead>
                         <tr>
-                          <th />
                           <th>Tên Sản Phẩm</th>
                           <th>Giá Tiền</th>
                           <th>Số Lượng Đã Bán</th>
-                          <th>Hiệu Xuất</th>
                         </tr>
                       </thead>
                       <tbody>
                         {this.props.top_product.map((element, index) => {
                           return(
                             <tr>
-                            <td>
-                              <div className='home-image'>
-                                <img
-                                  src={element.img}
-                                  
-                                />
-                              </div>
-                              
-                            </td>
+
                             <td>{element.name}</td>
                             <td>{element.price}</td>
                             <td>{element.count}</td>
                             <td>
-                              <div className="progress thin">
-                                <div
-                                  className="progress-bar progress-bar-danger"
-                                  role="progressbar"
-                                  aria-valuenow="80"
-                                  aria-valuemin="0"
-                                  aria-valuemax="100"
-                                  style={{ width: this.tinh(element.count) }}
-                                />
-                              </div>
                               <span className="sr-only">73%</span>
                             </td>
                           </tr>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 class Statistical extends Component {
-  constructor() {
+  constructor() {//lưu trữ thông tin cụ thể mà component cần để hiển thị hoặc xử lý.
     super();
     this.state = {
       billNumberDay: null,
@@ -27,6 +27,7 @@ class Statistical extends Component {
       totalQuauter: null
     };
   }
+  //cập nhật trạng thái của component dựa trên dữ liệu mới
   componentWillReceiveProps(nextProps) {
     if (nextProps.dataByDay !== this.props.dataByDay) {
       this.setState({

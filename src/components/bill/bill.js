@@ -113,8 +113,8 @@ class Bill extends Component {
                     <th>Name</th>
                     <th>Address</th>
                     <th>Phone</th>
-                    <th>Date</th>
-                    <th>Products</th>
+                    <th>Product</th>
+                    <th>Price</th>
                   </tr>
                   {this.props.bill.map((element, index) => {
                     return (
@@ -132,7 +132,6 @@ class Bill extends Component {
                               {element.products.map((item, index) => {
                                 return (
                                     <div className='product'>
-                                      <div className='img'><img src={item.img}></img> </div>
                                       <div className='product-content'>
                                         <div>{item.name }</div>
                                         <div>{"Số Lượng: " + item.count}</div>
